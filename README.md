@@ -28,7 +28,7 @@ module.exports = {
 }
 // output: index.c5474870259fc6bd8afd.html
 ```
-Once `css` and `js` are changed, their hash will change, so html's content will change，but html's hash will not change by using `[hash]` `[chunkhash]`, the output is still `index.c5474870259fc6bd8afd.html`。So if you want to change html's hash when html's content changes, you should use `[contenthash]` provided by `hash-content-html-webpack-plugin`.
+Once `css` and `js` are modified, their hash will change(e.g. `/app/css/index.8a09fef2bfaf1c05ca22.css` changes to `/app/css/index.375969b84db8a0c16a1d.css  `), so html's content will change，but html's hash will not change by using `[hash]` `[chunkhash]`, the output is still `index.c5474870259fc6bd8afd.html`。So if you want to change html's hash when html's content changes, you should use `[contenthash]` provided by `hash-content-html-webpack-plugin`.
 
 # Install
 ```sh
