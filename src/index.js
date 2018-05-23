@@ -6,7 +6,7 @@ module.exports = class ContentHash {
     compiler.plugin('compilation', (compilation) => {
       compilation.plugin(
         'html-webpack-plugin-after-emit',
-        ({ outputName, html }) => {
+        ({ outputName, html }, callback) => {
           const chunk = compilation.assets[outputName]
           const hash = hasha(html.source(), { 
             algorithm: 'md5' 
@@ -14,6 +14,7 @@ module.exports = class ContentHash {
           const name = outputName.replace(/\[contenthash\]/g, hash)
           compilation.assets[name] = chunk
           delete compilation.assets[outputName]
+          callback && callback()
         }
       )
     })
