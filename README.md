@@ -1,6 +1,6 @@
 # hash-content-html-webpack-plugin
 
-Generate md5 hash for html file (e.g. `index.f8704d178ff376c380a6.html`),  
+Generate MD5 hash for html file (e.g. `index.f8704d178ff376c380a6.html`),  
 based on file's content and working with [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin).
 
 # Why use hash-content-html-webpack-plugin?
